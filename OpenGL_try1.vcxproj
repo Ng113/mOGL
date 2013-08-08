@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{426F24C9-DF9A-4DC9-BA54-93BA8E006214}</ProjectGuid>
+    <RootNamespace>OpenGL_try1</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>../../include;$(IncludePath)</IncludePath>
+    <OutDir>$(ProjectDir)\bin\debug</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glaux.lib;glew32.lib;glew32s.lib;glut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\mOGL\Math\mMath.cpp" />
+    <ClCompile Include="src\mOGL\Math\Vector\Vector2.cpp" />
+    <ClCompile Include="src\mOGL\Math\Vector\Vector3.cpp" />
+    <ClCompile Include="src\mOGL\mOGLApplication.cpp" />
+    <ClCompile Include="src\mOGL\mOGLData.cpp" />
+    <ClCompile Include="src\mOGL\Render\Camera\Camera.cpp" />
+    <ClCompile Include="src\mOGL\Render\RenderManager.cpp" />
+    <ClCompile Include="src\mOGL\Render\RenderTechnique\PhongShading.cpp" />
+    <ClCompile Include="src\mOGL\Render\RenderTechnique\PhotonMapping.cpp" />
+    <ClCompile Include="src\mOGL\Render\RenderTechnique\RayTracing.cpp" />
+    <ClCompile Include="src\mOGL\Render\RenderTechnique\RenderTechnique.cpp" />
+    <ClCompile Include="src\mOGL\Scene\Light\Light.cpp" />
+    <ClCompile Include="src\mOGL\Scene\Object\mesh.cpp" />
+    <ClCompile Include="src\mOGL\Scene\Object\Object.cpp" />
+    <ClCompile Include="src\mOGL\Scene\Object\ObjectManager.cpp" />
+    <ClCompile Include="src\mOGL\Scene\Scene.cpp" />
+    <ClCompile Include="src\mOGL\String\String.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\mOGL\Math\mMath.h" />
+    <ClInclude Include="src\mOGL\Math\Vector\Vector2.h" />
+    <ClInclude Include="src\mOGL\Math\Vector\Vector3.h" />
+    <ClInclude Include="src\mOGL\mOGL.h" />
+    <ClInclude Include="src\mOGL\mOGLApplication.h" />
+    <ClInclude Include="src\mOGL\mOGLData.h" />
+    <ClInclude Include="src\mOGL\Render\Camera\Camera.h" />
+    <ClInclude Include="src\mOGL\Render\Render.h" />
+    <ClInclude Include="src\mOGL\Render\RenderManager.h" />
+    <ClInclude Include="src\mOGL\Render\RenderTechnique\PhongShading.h" />
+    <ClInclude Include="src\mOGL\Render\RenderTechnique\PhotonMapping.h" />
+    <ClInclude Include="src\mOGL\Render\RenderTechnique\RayTracing.h" />
+    <ClInclude Include="src\mOGL\Render\RenderTechnique\RenderTechnique.h" />
+    <ClInclude Include="src\mOGL\Scene\Light\Light.h" />
+    <ClInclude Include="src\mOGL\Scene\Object\mesh.h" />
+    <ClInclude Include="src\mOGL\Scene\Object\Object.h" />
+    <ClInclude Include="src\mOGL\Scene\Object\ObjectManager.h" />
+    <ClInclude Include="src\mOGL\Scene\Scene.h" />
+    <ClInclude Include="src\mOGL\ShaderLoader.h" />
+    <ClInclude Include="src\mOGL\String\String.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

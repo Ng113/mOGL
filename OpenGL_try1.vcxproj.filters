@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="原始程式檔">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="標頭檔">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="資源檔">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="資源檔\mOGL">
+      <UniqueIdentifier>{07f3295a-f365-4664-8dd4-0babd00c5cc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="資源檔\mOGL\Math">
+      <UniqueIdentifier>{84dd913c-710f-4f6e-ad27-22135e4b9bb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="資源檔\mOGL\Math\Vector">
+      <UniqueIdentifier>{23398635-2a79-4f35-9b3a-28eef402dabc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="資源檔\mOGL\Render">
+      <UniqueIdentifier>{2584716f-766b-4617-b1a7-d92a4ff8cb31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="資源檔\mOGL\Scene">
+      <UniqueIdentifier>{766eab7b-274e-4e71-a44f-feb60166fc17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="資源檔\mOGL\Scene\Object">
+      <UniqueIdentifier>{812221a1-86bd-4b65-95f3-cd78b50d18b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="資源檔\mOGL\Scene\Light">
+      <UniqueIdentifier>{70e718ae-defd-4c1f-9b8d-5a13fbdfda2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="資源檔\mOGL\Render\Camera">
+      <UniqueIdentifier>{ebb79755-e080-4801-ae65-26b6e50f5189}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="資源檔\mOGL\String">
+      <UniqueIdentifier>{2d44438e-5689-4845-9933-509b12e5a8d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="資源檔\mOGL\Render\RenderTechnique">
+      <UniqueIdentifier>{f9f9b78a-f99c-40d3-9865-ce411d3309d3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>資源檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Math\Vector\Vector2.cpp">
+      <Filter>資源檔\mOGL\Math\Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Math\Vector\Vector3.cpp">
+      <Filter>資源檔\mOGL\Math\Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Math\mMath.cpp">
+      <Filter>資源檔\mOGL\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\String\String.cpp">
+      <Filter>資源檔\mOGL\String</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Scene\Scene.cpp">
+      <Filter>資源檔\mOGL\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Scene\Light\Light.cpp">
+      <Filter>資源檔\mOGL\Scene\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Scene\Object\mesh.cpp">
+      <Filter>資源檔\mOGL\Scene\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Scene\Object\Object.cpp">
+      <Filter>資源檔\mOGL\Scene\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Scene\Object\ObjectManager.cpp">
+      <Filter>資源檔\mOGL\Scene\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Render\RenderManager.cpp">
+      <Filter>資源檔\mOGL\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Render\RenderTechnique\PhongShading.cpp">
+      <Filter>資源檔\mOGL\Render\RenderTechnique</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Render\RenderTechnique\PhotonMapping.cpp">
+      <Filter>資源檔\mOGL\Render\RenderTechnique</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Render\RenderTechnique\RayTracing.cpp">
+      <Filter>資源檔\mOGL\Render\RenderTechnique</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Render\RenderTechnique\RenderTechnique.cpp">
+      <Filter>資源檔\mOGL\Render\RenderTechnique</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\mOGLApplication.cpp">
+      <Filter>資源檔\mOGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\mOGLData.cpp">
+      <Filter>資源檔\mOGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Render\Camera\Camera.cpp">
+      <Filter>資源檔\mOGL\Render\Camera</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\mOGL\Math\Vector\Vector2.h">
+      <Filter>資源檔\mOGL\Math\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Math\Vector\Vector3.h">
+      <Filter>資源檔\mOGL\Math\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Math\mMath.h">
+      <Filter>資源檔\mOGL\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\String\String.h">
+      <Filter>資源檔\mOGL\String</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Scene\Scene.h">
+      <Filter>資源檔\mOGL\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Scene\Light\Light.h">
+      <Filter>資源檔\mOGL\Scene\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Scene\Object\mesh.h">
+      <Filter>資源檔\mOGL\Scene\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Scene\Object\Object.h">
+      <Filter>資源檔\mOGL\Scene\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Scene\Object\ObjectManager.h">
+      <Filter>資源檔\mOGL\Scene\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Render\Render.h">
+      <Filter>資源檔\mOGL\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Render\RenderManager.h">
+      <Filter>資源檔\mOGL\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Render\RenderTechnique\PhongShading.h">
+      <Filter>資源檔\mOGL\Render\RenderTechnique</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Render\RenderTechnique\PhotonMapping.h">
+      <Filter>資源檔\mOGL\Render\RenderTechnique</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Render\RenderTechnique\RayTracing.h">
+      <Filter>資源檔\mOGL\Render\RenderTechnique</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Render\RenderTechnique\RenderTechnique.h">
+      <Filter>資源檔\mOGL\Render\RenderTechnique</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\mOGL.h">
+      <Filter>資源檔\mOGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\mOGLApplication.h">
+      <Filter>資源檔\mOGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\mOGLData.h">
+      <Filter>資源檔\mOGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\ShaderLoader.h">
+      <Filter>資源檔\mOGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Render\Camera\Camera.h">
+      <Filter>資源檔\mOGL\Render\Camera</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
