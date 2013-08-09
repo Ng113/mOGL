@@ -24,6 +24,11 @@ mOGL::mOGLApplication::mOGLApplication(int argc, char *argv[]) : width( 1024 ) ,
 	glutMotionFunc( FunPtrMouseMove );
 }
 
+void mOGL::mOGLApplication::initial()
+{
+	
+}
+
 void mOGL::mOGLApplication::run()
 {
 	lastFrameTimer = time( NULL );

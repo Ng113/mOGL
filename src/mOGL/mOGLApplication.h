@@ -15,6 +15,7 @@ namespace mOGL
 			void getFocus();
 			void	run();
 		protected:
+			virtual void initial();
 			virtual void	keyboard(unsigned char key, int x, int y);
 			virtual void	mouseClick(int button, int state, int x, int y);
 			virtual void	mouseMove(int x, int y);

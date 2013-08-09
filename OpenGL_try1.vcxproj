@@ -78,6 +78,7 @@
     <ClCompile Include="src\mOGL\Render\RenderTechnique\RayTracing.cpp" />
     <ClCompile Include="src\mOGL\Render\RenderTechnique\RenderTechnique.cpp" />
     <ClCompile Include="src\mOGL\Scene\Light\Light.cpp" />
+    <ClCompile Include="src\mOGL\Scene\Light\LightManager.cpp" />
     <ClCompile Include="src\mOGL\Scene\Object\mesh.cpp" />
     <ClCompile Include="src\mOGL\Scene\Object\Object.cpp" />
     <ClCompile Include="src\mOGL\Scene\Object\ObjectManager.cpp" />
@@ -99,6 +100,7 @@
     <ClInclude Include="src\mOGL\Render\RenderTechnique\RayTracing.h" />
     <ClInclude Include="src\mOGL\Render\RenderTechnique\RenderTechnique.h" />
     <ClInclude Include="src\mOGL\Scene\Light\Light.h" />
+    <ClInclude Include="src\mOGL\Scene\Light\LightManager.h" />
     <ClInclude Include="src\mOGL\Scene\Object\mesh.h" />
     <ClInclude Include="src\mOGL\Scene\Object\Object.h" />
     <ClInclude Include="src\mOGL\Scene\Object\ObjectManager.h" />

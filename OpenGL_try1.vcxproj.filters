@@ -99,6 +99,9 @@
     <ClCompile Include="src\mOGL\Render\Camera\Camera.cpp">
       <Filter>資源檔\mOGL\Render\Camera</Filter>
     </ClCompile>
+    <ClCompile Include="src\mOGL\Scene\Light\LightManager.cpp">
+      <Filter>資源檔\mOGL\Scene\Light</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\mOGL\Math\Vector\Vector2.h">
@@ -160,6 +163,9 @@
     </ClInclude>
     <ClInclude Include="src\mOGL\Render\Camera\Camera.h">
       <Filter>資源檔\mOGL\Render\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Scene\Light\LightManager.h">
+      <Filter>資源檔\mOGL\Scene\Light</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
