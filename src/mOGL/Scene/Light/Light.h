@@ -2,7 +2,7 @@
 #define __LIGHT_H__
 
 #include "../../Math/mMath.h"
-
+#include <string>
 /*
 	先針對point light的部分處理
 	其實真正的light function不會在這裡
@@ -26,11 +26,13 @@ namespace mOGL
 				SPOTLIGHT,
 			}LIGHT_TYPE;
 		public:
-			Light();
-			Light( LIGHT_TYPE type );
+			Light( std::string objName );
+			Light( LIGHT_TYPE type , std::string objName );
 			bool					setLightType( LIGHT_TYPE type);
 			LIGHT_TYPE	getLightType( void );
+			std::string			getName( void );
 		protected:
+			std::string				name;
 			LIGHT_TYPE		mLightType;
 			mOGL::Vector3	position;
 			mOGL::Vector3	direction;

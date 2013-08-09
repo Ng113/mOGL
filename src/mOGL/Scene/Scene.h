@@ -2,7 +2,7 @@
 #define __SCENE_H__
 
 class ObjectManager;
-
+class LightManager;
 namespace mOGL
 {
 	class Scene
@@ -11,6 +11,7 @@ namespace mOGL
 		Scene();
 	private:
 		ObjectManager*	mObjetMgr;
+		LightManager*    mLightMgr;
 	};
 }
 

@@ -11,12 +11,12 @@ namespace mOGL
 	{
 	public:
 		LightManager();
-		Light*	addLight( Light::LIGHT_TYPE type , std::string name );
-		bool		destoryAll( void );
+		Light*	addLight( Light::LIGHT_TYPE type , std::string name ="");
+		void		destoryAll( void );
 		bool		destoryLight( Light* light );
 		bool		destoryLight( std::string name );
 	private:
-		std::vector<Light> mLights;
+		std::vector<Light*> mLights;
 	};
 }
 
