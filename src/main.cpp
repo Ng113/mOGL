@@ -3,13 +3,9 @@
 #include "glut.h"
 #include "wglew.h"
 
-#include "mOGL\Scene\Camera\Camera.h"
-
-mOGL::Camera* cmaera;
-
 void initial()
 {
-	cmaera = new mOGL::Camera();
+
 }
 
 void Display(void)

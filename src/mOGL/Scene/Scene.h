@@ -1,13 +1,13 @@
 #ifndef __SCENE_H__
 #define __SCENE_H__
 
-class ObjectManager;
-class LightManager;
-
 #include <string>
 
 namespace mOGL
 {
+	class ObjectManager;
+	class LightManager;
+	class CameraManager;
 	class Scene
 	{
 	public:
@@ -16,6 +16,7 @@ namespace mOGL
 	public:
 		ObjectManager*	objetMgr;
 		LightManager*    lightMgr;
+		CameraManager*	cameraMgr;
 	private:
 		std::string mName;
 	};

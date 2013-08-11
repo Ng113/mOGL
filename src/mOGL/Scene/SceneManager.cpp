@@ -10,11 +10,7 @@ SceneManager::SceneManager()
 
 SceneManager::~SceneManager()
 {
-	for(int i=0;i<mScenes.size();++i)
-	{
-		if( mScenes[i] == NULL ) continue;
-		delete( mScenes[i] );
-	}
+	removeAllScene();
 }
 
 Scene* SceneManager::addScene( std::string name )
