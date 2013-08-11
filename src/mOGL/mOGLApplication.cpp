@@ -10,6 +10,7 @@ mOGLApplication* mOGL::mOGLApplication::nowFocus = NULL;
 
 mOGL::mOGLApplication::mOGLApplication(int argc, char *argv[]) : width( 1024 ) ,height( 768 )
 {
+	initial();
 	getFocus();
 	glutInit(&argc, argv);
 	glutInitWindowSize( 1024 , 768 );
@@ -22,11 +23,16 @@ mOGL::mOGLApplication::mOGLApplication(int argc, char *argv[]) : width( 1024 ) ,
 	glutReshapeFunc( FunPtrWindowReshape );
 	glutMouseFunc( FunPtrMouseClick ); 
 	glutMotionFunc( FunPtrMouseMove );
+
+	createScene();
 }
 
 void mOGL::mOGLApplication::initial()
 {
-	
+	mRenderMgr = new RenderManager();
+	mSceneMgr = new SceneManager();
+	mMainScene = mSceneMgr->addScene( "mMainScene" );
+	mMainCamera = mMainScene->cameraMgr->addCamera( "mMainCamera" );
 }
 
 void mOGL::mOGLApplication::run()
@@ -40,9 +46,14 @@ void mOGL::mOGLApplication::getFocus()
 	nowFocus = this;
 }
 
-void mOGL::mOGLApplication::display()
+void mOGL::mOGLApplication::createScene( void )
 {
-	mOGL::mRenderMgr->render();
+	
+}
+
+ void mOGL::mOGLApplication::display()
+{
+	mRenderMgr->render();
 	float timeStep = time( NULL ) - lastFrameTimer ;
 	update( timeStep );
 }

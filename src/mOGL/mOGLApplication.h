@@ -7,7 +7,7 @@
 
 namespace mOGL
 {
-
+	
 	class mOGLApplication
 	{
 		public:
@@ -16,6 +16,7 @@ namespace mOGL
 			void	run();
 		protected:
 			virtual void initial();
+			virtual void createScene( void );
 			virtual void	keyboard(unsigned char key, int x, int y);
 			virtual void	mouseClick(int button, int state, int x, int y);
 			virtual void	mouseMove(int x, int y);
@@ -23,6 +24,10 @@ namespace mOGL
 			virtual void update( float timeSinceLastFrame );
 		protected:
 			unsigned int width , height ;
+			SceneManager*	mSceneMgr;
+			Scene*					mMainScene;
+			Camera*				mMainCamera;
+			RenderManager*	mRenderMgr;
 		private:
 			static void	FunPtrDisplay( void );
 			static void	FunPtrKeyboard(unsigned char key, int x, int y);
