@@ -71,18 +71,21 @@
     <ClCompile Include="src\mOGL\Math\Vector\Vector3.cpp" />
     <ClCompile Include="src\mOGL\mOGLApplication.cpp" />
     <ClCompile Include="src\mOGL\mOGLData.cpp" />
-    <ClCompile Include="src\mOGL\Render\Camera\Camera.cpp" />
     <ClCompile Include="src\mOGL\Render\RenderManager.cpp" />
     <ClCompile Include="src\mOGL\Render\RenderTechnique\PhongShading.cpp" />
     <ClCompile Include="src\mOGL\Render\RenderTechnique\PhotonMapping.cpp" />
     <ClCompile Include="src\mOGL\Render\RenderTechnique\RayTracing.cpp" />
     <ClCompile Include="src\mOGL\Render\RenderTechnique\RenderTechnique.cpp" />
+    <ClCompile Include="src\mOGL\Scene\Camera\Camera.cpp" />
+    <ClCompile Include="src\mOGL\Scene\Camera\CameraManager.cpp" />
     <ClCompile Include="src\mOGL\Scene\Light\Light.cpp" />
     <ClCompile Include="src\mOGL\Scene\Light\LightManager.cpp" />
-    <ClCompile Include="src\mOGL\Scene\Object\mesh.cpp" />
+    <ClCompile Include="src\mOGL\Scene\Object\Mesh\mesh.cpp" />
+    <ClCompile Include="src\mOGL\Scene\Object\Mesh\MeshManager.cpp" />
     <ClCompile Include="src\mOGL\Scene\Object\Object.cpp" />
     <ClCompile Include="src\mOGL\Scene\Object\ObjectManager.cpp" />
     <ClCompile Include="src\mOGL\Scene\Scene.cpp" />
+    <ClCompile Include="src\mOGL\Scene\SceneManager.cpp" />
     <ClCompile Include="src\mOGL\String\String.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -92,19 +95,22 @@
     <ClInclude Include="src\mOGL\mOGL.h" />
     <ClInclude Include="src\mOGL\mOGLApplication.h" />
     <ClInclude Include="src\mOGL\mOGLData.h" />
-    <ClInclude Include="src\mOGL\Render\Camera\Camera.h" />
     <ClInclude Include="src\mOGL\Render\Render.h" />
     <ClInclude Include="src\mOGL\Render\RenderManager.h" />
     <ClInclude Include="src\mOGL\Render\RenderTechnique\PhongShading.h" />
     <ClInclude Include="src\mOGL\Render\RenderTechnique\PhotonMapping.h" />
     <ClInclude Include="src\mOGL\Render\RenderTechnique\RayTracing.h" />
     <ClInclude Include="src\mOGL\Render\RenderTechnique\RenderTechnique.h" />
+    <ClInclude Include="src\mOGL\Scene\Camera\Camera.h" />
+    <ClInclude Include="src\mOGL\Scene\Camera\CameraManager.h" />
     <ClInclude Include="src\mOGL\Scene\Light\Light.h" />
     <ClInclude Include="src\mOGL\Scene\Light\LightManager.h" />
-    <ClInclude Include="src\mOGL\Scene\Object\mesh.h" />
+    <ClInclude Include="src\mOGL\Scene\Object\Mesh\mesh.h" />
+    <ClInclude Include="src\mOGL\Scene\Object\Mesh\MeshManager.h" />
     <ClInclude Include="src\mOGL\Scene\Object\Object.h" />
     <ClInclude Include="src\mOGL\Scene\Object\ObjectManager.h" />
     <ClInclude Include="src\mOGL\Scene\Scene.h" />
+    <ClInclude Include="src\mOGL\Scene\SceneManager.h" />
     <ClInclude Include="src\mOGL\ShaderLoader.h" />
     <ClInclude Include="src\mOGL\String\String.h" />
   </ItemGroup>

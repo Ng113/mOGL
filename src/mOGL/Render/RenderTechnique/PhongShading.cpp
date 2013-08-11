@@ -1,7 +1,7 @@
 #include "PhongShading.h"
 #include "../../mOGLData.h"
 #include "../../Scene/Object/ObjectManager.h"
-#include "../../Scene/Object/mesh.h"
+#include "../../Scene/Object/Mesh/mesh.h"
 #include "glut.h"
 using namespace mOGL;
 

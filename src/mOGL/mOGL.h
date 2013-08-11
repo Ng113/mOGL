@@ -1,7 +1,7 @@
 #ifndef  __MOGL_H__
 #define __MOGL_H__
 
-#include "Render\Camera\Camera.h"
+#include "Scene\Camera\Camera.h"
 #include "Math\mMath.h"
 #include "mOGLData.h"
 #include "Render\Render.h"

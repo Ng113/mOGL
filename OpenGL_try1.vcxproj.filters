@@ -34,14 +34,17 @@
     <Filter Include="資源檔\mOGL\Scene\Light">
       <UniqueIdentifier>{70e718ae-defd-4c1f-9b8d-5a13fbdfda2b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="資源檔\mOGL\Render\Camera">
-      <UniqueIdentifier>{ebb79755-e080-4801-ae65-26b6e50f5189}</UniqueIdentifier>
-    </Filter>
     <Filter Include="資源檔\mOGL\String">
       <UniqueIdentifier>{2d44438e-5689-4845-9933-509b12e5a8d1}</UniqueIdentifier>
     </Filter>
     <Filter Include="資源檔\mOGL\Render\RenderTechnique">
       <UniqueIdentifier>{f9f9b78a-f99c-40d3-9865-ce411d3309d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="資源檔\mOGL\Scene\Camera">
+      <UniqueIdentifier>{ebb79755-e080-4801-ae65-26b6e50f5189}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="資源檔\mOGL\Scene\Object\Mesh">
+      <UniqueIdentifier>{357c0c61-7510-4e1d-86cc-9d2774104ffb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -65,9 +68,6 @@
     </ClCompile>
     <ClCompile Include="src\mOGL\Scene\Light\Light.cpp">
       <Filter>資源檔\mOGL\Scene\Light</Filter>
-    </ClCompile>
-    <ClCompile Include="src\mOGL\Scene\Object\mesh.cpp">
-      <Filter>資源檔\mOGL\Scene\Object</Filter>
     </ClCompile>
     <ClCompile Include="src\mOGL\Scene\Object\Object.cpp">
       <Filter>資源檔\mOGL\Scene\Object</Filter>
@@ -96,11 +96,23 @@
     <ClCompile Include="src\mOGL\mOGLData.cpp">
       <Filter>資源檔\mOGL</Filter>
     </ClCompile>
-    <ClCompile Include="src\mOGL\Render\Camera\Camera.cpp">
-      <Filter>資源檔\mOGL\Render\Camera</Filter>
-    </ClCompile>
     <ClCompile Include="src\mOGL\Scene\Light\LightManager.cpp">
       <Filter>資源檔\mOGL\Scene\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Scene\Camera\Camera.cpp">
+      <Filter>資源檔\mOGL\Scene\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Scene\Camera\CameraManager.cpp">
+      <Filter>資源檔\mOGL\Scene\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Scene\Object\Mesh\MeshManager.cpp">
+      <Filter>資源檔\mOGL\Scene\Object\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Scene\Object\Mesh\mesh.cpp">
+      <Filter>資源檔\mOGL\Scene\Object\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Scene\SceneManager.cpp">
+      <Filter>資源檔\mOGL\Scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -121,9 +133,6 @@
     </ClInclude>
     <ClInclude Include="src\mOGL\Scene\Light\Light.h">
       <Filter>資源檔\mOGL\Scene\Light</Filter>
-    </ClInclude>
-    <ClInclude Include="src\mOGL\Scene\Object\mesh.h">
-      <Filter>資源檔\mOGL\Scene\Object</Filter>
     </ClInclude>
     <ClInclude Include="src\mOGL\Scene\Object\Object.h">
       <Filter>資源檔\mOGL\Scene\Object</Filter>
@@ -161,11 +170,23 @@
     <ClInclude Include="src\mOGL\ShaderLoader.h">
       <Filter>資源檔\mOGL</Filter>
     </ClInclude>
-    <ClInclude Include="src\mOGL\Render\Camera\Camera.h">
-      <Filter>資源檔\mOGL\Render\Camera</Filter>
-    </ClInclude>
     <ClInclude Include="src\mOGL\Scene\Light\LightManager.h">
       <Filter>資源檔\mOGL\Scene\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Scene\Camera\Camera.h">
+      <Filter>資源檔\mOGL\Scene\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Scene\Camera\CameraManager.h">
+      <Filter>資源檔\mOGL\Scene\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Scene\Object\Mesh\MeshManager.h">
+      <Filter>資源檔\mOGL\Scene\Object\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Scene\Object\Mesh\mesh.h">
+      <Filter>資源檔\mOGL\Scene\Object\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Scene\SceneManager.h">
+      <Filter>資源檔\mOGL\Scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

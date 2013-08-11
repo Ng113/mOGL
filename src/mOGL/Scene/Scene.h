@@ -3,15 +3,15 @@
 
 class ObjectManager;
 class LightManager;
+
 namespace mOGL
 {
 	class Scene
 	{
 	public:
 		Scene();
-	private:
-		ObjectManager*	mObjetMgr;
-		LightManager*    mLightMgr;
+		ObjectManager*	objetMgr;
+		LightManager*    lightMgr;
 	};
 }
 

@@ -3,7 +3,7 @@
 #include "glut.h"
 #include "wglew.h"
 
-#include "mOGL\Render\Camera\Camera.h"
+#include "mOGL\Scene\Camera\Camera.h"
 
 mOGL::Camera* cmaera;
 
