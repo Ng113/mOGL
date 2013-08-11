@@ -4,14 +4,20 @@
 class ObjectManager;
 class LightManager;
 
+#include <string>
+
 namespace mOGL
 {
 	class Scene
 	{
 	public:
-		Scene();
+		Scene( std::string name );
+		std::string		getName( void );
+	public:
 		ObjectManager*	objetMgr;
 		LightManager*    lightMgr;
+	private:
+		std::string mName;
 	};
 }
 

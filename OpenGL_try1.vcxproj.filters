@@ -46,6 +46,9 @@
     <Filter Include="資源檔\mOGL\Scene\Object\Mesh">
       <UniqueIdentifier>{357c0c61-7510-4e1d-86cc-9d2774104ffb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="資源檔\mOGL\Scene\Object\Texture">
+      <UniqueIdentifier>{8199ad64-a244-4a1a-b43d-38b0803765e6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -113,6 +116,12 @@
     </ClCompile>
     <ClCompile Include="src\mOGL\Scene\SceneManager.cpp">
       <Filter>資源檔\mOGL\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Scene\Object\Texture\Texture.cpp">
+      <Filter>資源檔\mOGL\Scene\Object\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Scene\Object\Texture\TextureManager.cpp">
+      <Filter>資源檔\mOGL\Scene\Object\Texture</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +196,12 @@
     </ClInclude>
     <ClInclude Include="src\mOGL\Scene\SceneManager.h">
       <Filter>資源檔\mOGL\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Scene\Object\Texture\Texture.h">
+      <Filter>資源檔\mOGL\Scene\Object\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Scene\Object\Texture\TextureManager.h">
+      <Filter>資源檔\mOGL\Scene\Object\Texture</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

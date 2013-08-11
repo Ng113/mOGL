@@ -84,6 +84,8 @@
     <ClCompile Include="src\mOGL\Scene\Object\Mesh\MeshManager.cpp" />
     <ClCompile Include="src\mOGL\Scene\Object\Object.cpp" />
     <ClCompile Include="src\mOGL\Scene\Object\ObjectManager.cpp" />
+    <ClCompile Include="src\mOGL\Scene\Object\Texture\Texture.cpp" />
+    <ClCompile Include="src\mOGL\Scene\Object\Texture\TextureManager.cpp" />
     <ClCompile Include="src\mOGL\Scene\Scene.cpp" />
     <ClCompile Include="src\mOGL\Scene\SceneManager.cpp" />
     <ClCompile Include="src\mOGL\String\String.cpp" />
@@ -109,6 +111,8 @@
     <ClInclude Include="src\mOGL\Scene\Object\Mesh\MeshManager.h" />
     <ClInclude Include="src\mOGL\Scene\Object\Object.h" />
     <ClInclude Include="src\mOGL\Scene\Object\ObjectManager.h" />
+    <ClInclude Include="src\mOGL\Scene\Object\Texture\Texture.h" />
+    <ClInclude Include="src\mOGL\Scene\Object\Texture\TextureManager.h" />
     <ClInclude Include="src\mOGL\Scene\Scene.h" />
     <ClInclude Include="src\mOGL\Scene\SceneManager.h" />
     <ClInclude Include="src\mOGL\ShaderLoader.h" />
