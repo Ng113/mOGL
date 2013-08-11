@@ -3,16 +3,18 @@
 
 using namespace mOGL;
 
-Camera::Camera()
+Camera::Camera( std::string name )
 {
+	mName = name ;
 	position = mOGL::Vector3( 0.0 , 0.0 , 0.0 );
 	lookDirection = mOGL::Vector3( 0.0 , 0.0 , 1.0 );
 	upDirection = mOGL::Vector3( 0.0 , 1.0 , 0.0 );
 	windowPos = mOGL::Vector2( 0.0 , 0.0 );
 	windowLenght = mOGL::Vector2( 0.0 , 0.0 );
 }
-Camera::Camera( mOGL::Vector3	position , mOGL::Vector3	lookDirection , mOGL::Vector3	upDirection)
+Camera::Camera( std::string name , mOGL::Vector3	position , mOGL::Vector3	lookDirection , mOGL::Vector3	upDirection)
 {
+	mName = name ;
 	this->position = position;
 	this->lookDirection = lookDirection;
 	this->upDirection = upDirection;
@@ -49,6 +51,10 @@ bool Camera::setUpDirection( mOGL::Vector3 upDirection )
 	this->upDirection = upDirection;
 	_reCalculateUpDirection();
 	return true;
+}
+std::string	  Camera::getName( void )
+{
+	return mName;	
 }
 
 mOGL::Vector3 Camera::getPosition()
