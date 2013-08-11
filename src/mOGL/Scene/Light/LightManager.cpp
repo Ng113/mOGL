@@ -6,6 +6,12 @@ LightManager::LightManager()
 {
 
 }
+
+LightManager::~LightManager()
+{
+	destoryAll();
+}
+
 Light*	LightManager::addLight( Light::LIGHT_TYPE type , std::string name )
 {
 	bool autoNaming;

@@ -11,6 +11,7 @@ namespace mOGL
 	{
 	public:
 		LightManager();
+		~LightManager();
 		Light*	addLight( Light::LIGHT_TYPE type , std::string name ="");
 		void		destoryAll( void );
 		bool		destoryLight( Light* light );
