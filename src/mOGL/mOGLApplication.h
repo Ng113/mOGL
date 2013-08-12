@@ -2,7 +2,6 @@
 #define __MOGLAPPLICATION_H__
 
 #include "glut.h"
-#include "mOGLData.h"
 #include "mOGL.h"
 
 namespace mOGL

@@ -7,6 +7,8 @@
 
 namespace mOGL
 {
+	class TextureManager;
+	class MeshManager;
 	class ObjectManager
 	{
 		public:
@@ -23,6 +25,8 @@ namespace mOGL
 		private:
 			int												TotalNum;
 			std::vector< mOGL::Object* >	objects;
+			TextureManager*							mTextureMgr;
+			MeshManager*							mMeshMgr;
 	};
 }
 #endif

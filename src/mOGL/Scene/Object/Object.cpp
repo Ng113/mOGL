@@ -1,5 +1,5 @@
 #include "Object.h"
-#include "Mesh\mesh.h"
+#include "..\..\ResourceLoader\Mesh\mesh.h"
 
 using namespace mOGL;
 

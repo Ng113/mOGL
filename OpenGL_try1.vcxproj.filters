@@ -37,17 +37,20 @@
     <Filter Include="資源檔\mOGL\Scene\Camera">
       <UniqueIdentifier>{ebb79755-e080-4801-ae65-26b6e50f5189}</UniqueIdentifier>
     </Filter>
-    <Filter Include="資源檔\mOGL\Scene\Object\Mesh">
-      <UniqueIdentifier>{357c0c61-7510-4e1d-86cc-9d2774104ffb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="資源檔\mOGL\Scene\Object\Texture">
-      <UniqueIdentifier>{8199ad64-a244-4a1a-b43d-38b0803765e6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="資源檔\mOGL\Scene\Render">
       <UniqueIdentifier>{2584716f-766b-4617-b1a7-d92a4ff8cb31}</UniqueIdentifier>
     </Filter>
     <Filter Include="資源檔\mOGL\Scene\Render\RenderTechnique">
       <UniqueIdentifier>{f9f9b78a-f99c-40d3-9865-ce411d3309d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="資源檔\mOGL\ResourceLoader">
+      <UniqueIdentifier>{8fbb594d-d86d-4514-b8c8-b26963556bae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="資源檔\mOGL\ResourceLoader\Texture">
+      <UniqueIdentifier>{8199ad64-a244-4a1a-b43d-38b0803765e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="資源檔\mOGL\ResourceLoader\Mesh">
+      <UniqueIdentifier>{357c0c61-7510-4e1d-86cc-9d2774104ffb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -81,9 +84,6 @@
     <ClCompile Include="src\mOGL\mOGLApplication.cpp">
       <Filter>資源檔\mOGL</Filter>
     </ClCompile>
-    <ClCompile Include="src\mOGL\mOGLData.cpp">
-      <Filter>資源檔\mOGL</Filter>
-    </ClCompile>
     <ClCompile Include="src\mOGL\Scene\Light\LightManager.cpp">
       <Filter>資源檔\mOGL\Scene\Light</Filter>
     </ClCompile>
@@ -93,20 +93,8 @@
     <ClCompile Include="src\mOGL\Scene\Camera\CameraManager.cpp">
       <Filter>資源檔\mOGL\Scene\Camera</Filter>
     </ClCompile>
-    <ClCompile Include="src\mOGL\Scene\Object\Mesh\MeshManager.cpp">
-      <Filter>資源檔\mOGL\Scene\Object\Mesh</Filter>
-    </ClCompile>
-    <ClCompile Include="src\mOGL\Scene\Object\Mesh\mesh.cpp">
-      <Filter>資源檔\mOGL\Scene\Object\Mesh</Filter>
-    </ClCompile>
     <ClCompile Include="src\mOGL\Scene\SceneManager.cpp">
       <Filter>資源檔\mOGL\Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="src\mOGL\Scene\Object\Texture\Texture.cpp">
-      <Filter>資源檔\mOGL\Scene\Object\Texture</Filter>
-    </ClCompile>
-    <ClCompile Include="src\mOGL\Scene\Object\Texture\TextureManager.cpp">
-      <Filter>資源檔\mOGL\Scene\Object\Texture</Filter>
     </ClCompile>
     <ClCompile Include="src\mOGL\Scene\Render\RenderTechnique\PhongShading.cpp">
       <Filter>資源檔\mOGL\Scene\Render\RenderTechnique</Filter>
@@ -122,6 +110,21 @@
     </ClCompile>
     <ClCompile Include="src\mOGL\Scene\Render\RenderManager.cpp">
       <Filter>資源檔\mOGL\Scene\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\ResourceLoader\ResourceLoader.cpp">
+      <Filter>資源檔\mOGL\ResourceLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\ResourceLoader\Texture\Texture.cpp">
+      <Filter>資源檔\mOGL\ResourceLoader\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\ResourceLoader\Texture\TextureManager.cpp">
+      <Filter>資源檔\mOGL\ResourceLoader\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\ResourceLoader\Mesh\mesh.cpp">
+      <Filter>資源檔\mOGL\ResourceLoader\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\ResourceLoader\Mesh\MeshManager.cpp">
+      <Filter>資源檔\mOGL\ResourceLoader\Mesh</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -155,9 +158,6 @@
     <ClInclude Include="src\mOGL\mOGLApplication.h">
       <Filter>資源檔\mOGL</Filter>
     </ClInclude>
-    <ClInclude Include="src\mOGL\mOGLData.h">
-      <Filter>資源檔\mOGL</Filter>
-    </ClInclude>
     <ClInclude Include="src\mOGL\ShaderLoader.h">
       <Filter>資源檔\mOGL</Filter>
     </ClInclude>
@@ -170,20 +170,8 @@
     <ClInclude Include="src\mOGL\Scene\Camera\CameraManager.h">
       <Filter>資源檔\mOGL\Scene\Camera</Filter>
     </ClInclude>
-    <ClInclude Include="src\mOGL\Scene\Object\Mesh\MeshManager.h">
-      <Filter>資源檔\mOGL\Scene\Object\Mesh</Filter>
-    </ClInclude>
-    <ClInclude Include="src\mOGL\Scene\Object\Mesh\mesh.h">
-      <Filter>資源檔\mOGL\Scene\Object\Mesh</Filter>
-    </ClInclude>
     <ClInclude Include="src\mOGL\Scene\SceneManager.h">
       <Filter>資源檔\mOGL\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="src\mOGL\Scene\Object\Texture\Texture.h">
-      <Filter>資源檔\mOGL\Scene\Object\Texture</Filter>
-    </ClInclude>
-    <ClInclude Include="src\mOGL\Scene\Object\Texture\TextureManager.h">
-      <Filter>資源檔\mOGL\Scene\Object\Texture</Filter>
     </ClInclude>
     <ClInclude Include="src\mOGL\Scene\Render\RenderTechnique\PhongShading.h">
       <Filter>資源檔\mOGL\Scene\Render\RenderTechnique</Filter>
@@ -202,6 +190,21 @@
     </ClInclude>
     <ClInclude Include="src\mOGL\Scene\Render\RenderManager.h">
       <Filter>資源檔\mOGL\Scene\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\ResourceLoader\ResourceLoader.h">
+      <Filter>資源檔\mOGL\ResourceLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\ResourceLoader\Texture\Texture.h">
+      <Filter>資源檔\mOGL\ResourceLoader\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\ResourceLoader\Texture\TextureManager.h">
+      <Filter>資源檔\mOGL\ResourceLoader\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\ResourceLoader\Mesh\mesh.h">
+      <Filter>資源檔\mOGL\ResourceLoader\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\ResourceLoader\Mesh\MeshManager.h">
+      <Filter>資源檔\mOGL\ResourceLoader\Mesh</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

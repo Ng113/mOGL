@@ -1,7 +1,7 @@
 #include "PhongShading.h"
-#include "../../../mOGLData.h"
+#include "../../Scene.h"
 #include "../../Object/ObjectManager.h"
-#include "../../Object/Mesh/mesh.h"
+#include "../../../ResourceLoader/Mesh/mesh.h"
 #include "glut.h"
 using namespace mOGL;
  
@@ -33,9 +33,10 @@ void PhongShading::_renderLight( void )
 
 void PhongShading::_renderObject( void )
 {
-	for( int i = 0 ; i < mOGL::mObjetMgr->NumberOfObject() ; ++i )
+	ObjectManager* objMgr = mScene->objetMgr;
+	for( int i = 0 ; i < objMgr->NumberOfObject() ; ++i )
 	{
-		Object* obj = mObjetMgr->getObject( i );
+		Object* obj = objMgr->getObject( i );
 		if( obj == NULL ) continue;
 		mesh* objMesh = obj->getMeshPointer();
 		
