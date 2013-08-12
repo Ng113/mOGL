@@ -29,6 +29,7 @@ mOGL::mOGLApplication::mOGLApplication(int argc, char *argv[]) : width( 1024 ) ,
 
 void mOGL::mOGLApplication::initial()
 {
+	mOGL::ResourceLoader::initial();
 	mRenderMgr = new RenderManager();
 	mSceneMgr = new SceneManager();
 	mMainScene = mSceneMgr->addScene( "mMainScene" );

@@ -12,6 +12,7 @@
 #include "Scene\Light\LightManager.h"
 #include "Scene\Object\Object.h"
 #include "Scene\Object\ObjectManager.h"
+#include "ResourceLoader\ResourceLoader.h"
 #include "ResourceLoader\Mesh\mesh.h"
 #include "ResourceLoader\Mesh\MeshManager.h"
 #include "ResourceLoader\Texture\Texture.h"
