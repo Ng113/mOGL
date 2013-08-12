@@ -56,14 +56,15 @@ void mOGL::mOGLApplication::createScene( void )
 	mRenderMgr->render();
 	float timeStep = time( NULL ) - lastFrameTimer ;
 	update( timeStep );
+	lastFrameTimer = time( NULL );
 }
 void mOGL::mOGLApplication::keyboard(unsigned char key, int x, int y)
 {
-
+	std::cout<<" key:"<< key  <<"  x :" << x << " y: " << y << std::endl;
 }
 void mOGL::mOGLApplication::mouseClick(int button, int state, int x, int y)
 {
-
+	std::cout<<" mouse click: button"<< button <<" state: "<<state<<" x :"<<x<<" y: "<<y<<std::endl;
 }
 void mOGL::mOGLApplication::mouseMove(int x, int y)
 {

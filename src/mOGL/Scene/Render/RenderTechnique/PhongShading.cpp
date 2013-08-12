@@ -1,11 +1,11 @@
 #include "PhongShading.h"
-#include "../../mOGLData.h"
-#include "../../Scene/Object/ObjectManager.h"
-#include "../../Scene/Object/Mesh/mesh.h"
+#include "../../../mOGLData.h"
+#include "../../Object/ObjectManager.h"
+#include "../../Object/Mesh/mesh.h"
 #include "glut.h"
 using namespace mOGL;
-
-PhongShading::PhongShading()
+ 
+PhongShading::PhongShading( Scene* scene) : RenderTechnique( scene )
 {
 	mRenderTechniqueID = PHONG_SHADING;
 }
@@ -16,6 +16,22 @@ PhongShading::PhongShading()
 	2.rotation
 */
 void PhongShading::render()
+{
+	_renderView();
+	_renderLight();
+	_renderObject();
+}
+void PhongShading::_renderView( void )
+{
+
+}
+
+void PhongShading::_renderLight( void )
+{
+
+}
+
+void PhongShading::_renderObject( void )
 {
 	for( int i = 0 ; i < mOGL::mObjetMgr->NumberOfObject() ; ++i )
 	{

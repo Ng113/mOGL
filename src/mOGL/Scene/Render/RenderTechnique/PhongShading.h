@@ -8,7 +8,7 @@ namespace mOGL
 	class PhongShading : public RenderTechnique
 	{
 		public:
-			PhongShading( void );
+			PhongShading( Scene* scene);
 			void render( void );
 		private:
 			void _renderView( void );

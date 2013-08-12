@@ -6,11 +6,14 @@ using namespace mOGL;
 RenderManager::RenderManager()
 {
 	mRenderTechnique = NULL;
+	mRenderScene	= NULL;
 	setRenderingTechnique( RenderTechnique::PHONG_SHADING );
 }
 void RenderManager::render()
 {
+	if( mRenderTechnique == NULL ) return ;
 
+	mRenderTechnique->render();
 }
 void RenderManager::setRenderingTechnique( RenderTechnique::RENDERING_TECHNIQUE tec )
 {
@@ -29,6 +32,16 @@ void RenderManager::setRenderingTechnique( RenderTechnique::RENDERING_TECHNIQUE 
 	mRenderTechniqueID = tec;
 	
 }
+void	RenderManager::setRenderScene( Scene* scene )
+{
+	mRenderScene = scene;
+}
+
+Scene*	RenderManager::getRenderScene( void )
+{
+	return mRenderScene;
+}
+
 RenderTechnique::RENDERING_TECHNIQUE RenderManager::getRenderingTechnique( void )
 {
 	return mRenderTechniqueID;

@@ -22,9 +22,6 @@
     <Filter Include="資源檔\mOGL\Math\Vector">
       <UniqueIdentifier>{23398635-2a79-4f35-9b3a-28eef402dabc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="資源檔\mOGL\Render">
-      <UniqueIdentifier>{2584716f-766b-4617-b1a7-d92a4ff8cb31}</UniqueIdentifier>
-    </Filter>
     <Filter Include="資源檔\mOGL\Scene">
       <UniqueIdentifier>{766eab7b-274e-4e71-a44f-feb60166fc17}</UniqueIdentifier>
     </Filter>
@@ -37,9 +34,6 @@
     <Filter Include="資源檔\mOGL\String">
       <UniqueIdentifier>{2d44438e-5689-4845-9933-509b12e5a8d1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="資源檔\mOGL\Render\RenderTechnique">
-      <UniqueIdentifier>{f9f9b78a-f99c-40d3-9865-ce411d3309d3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="資源檔\mOGL\Scene\Camera">
       <UniqueIdentifier>{ebb79755-e080-4801-ae65-26b6e50f5189}</UniqueIdentifier>
     </Filter>
@@ -48,6 +42,12 @@
     </Filter>
     <Filter Include="資源檔\mOGL\Scene\Object\Texture">
       <UniqueIdentifier>{8199ad64-a244-4a1a-b43d-38b0803765e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="資源檔\mOGL\Scene\Render">
+      <UniqueIdentifier>{2584716f-766b-4617-b1a7-d92a4ff8cb31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="資源檔\mOGL\Scene\Render\RenderTechnique">
+      <UniqueIdentifier>{f9f9b78a-f99c-40d3-9865-ce411d3309d3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -77,21 +77,6 @@
     </ClCompile>
     <ClCompile Include="src\mOGL\Scene\Object\ObjectManager.cpp">
       <Filter>資源檔\mOGL\Scene\Object</Filter>
-    </ClCompile>
-    <ClCompile Include="src\mOGL\Render\RenderManager.cpp">
-      <Filter>資源檔\mOGL\Render</Filter>
-    </ClCompile>
-    <ClCompile Include="src\mOGL\Render\RenderTechnique\PhongShading.cpp">
-      <Filter>資源檔\mOGL\Render\RenderTechnique</Filter>
-    </ClCompile>
-    <ClCompile Include="src\mOGL\Render\RenderTechnique\PhotonMapping.cpp">
-      <Filter>資源檔\mOGL\Render\RenderTechnique</Filter>
-    </ClCompile>
-    <ClCompile Include="src\mOGL\Render\RenderTechnique\RayTracing.cpp">
-      <Filter>資源檔\mOGL\Render\RenderTechnique</Filter>
-    </ClCompile>
-    <ClCompile Include="src\mOGL\Render\RenderTechnique\RenderTechnique.cpp">
-      <Filter>資源檔\mOGL\Render\RenderTechnique</Filter>
     </ClCompile>
     <ClCompile Include="src\mOGL\mOGLApplication.cpp">
       <Filter>資源檔\mOGL</Filter>
@@ -123,6 +108,21 @@
     <ClCompile Include="src\mOGL\Scene\Object\Texture\TextureManager.cpp">
       <Filter>資源檔\mOGL\Scene\Object\Texture</Filter>
     </ClCompile>
+    <ClCompile Include="src\mOGL\Scene\Render\RenderTechnique\PhongShading.cpp">
+      <Filter>資源檔\mOGL\Scene\Render\RenderTechnique</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Scene\Render\RenderTechnique\PhotonMapping.cpp">
+      <Filter>資源檔\mOGL\Scene\Render\RenderTechnique</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Scene\Render\RenderTechnique\RayTracing.cpp">
+      <Filter>資源檔\mOGL\Scene\Render\RenderTechnique</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Scene\Render\RenderTechnique\RenderTechnique.cpp">
+      <Filter>資源檔\mOGL\Scene\Render\RenderTechnique</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Scene\Render\RenderManager.cpp">
+      <Filter>資源檔\mOGL\Scene\Render</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\mOGL\Math\Vector\Vector2.h">
@@ -148,24 +148,6 @@
     </ClInclude>
     <ClInclude Include="src\mOGL\Scene\Object\ObjectManager.h">
       <Filter>資源檔\mOGL\Scene\Object</Filter>
-    </ClInclude>
-    <ClInclude Include="src\mOGL\Render\Render.h">
-      <Filter>資源檔\mOGL\Render</Filter>
-    </ClInclude>
-    <ClInclude Include="src\mOGL\Render\RenderManager.h">
-      <Filter>資源檔\mOGL\Render</Filter>
-    </ClInclude>
-    <ClInclude Include="src\mOGL\Render\RenderTechnique\PhongShading.h">
-      <Filter>資源檔\mOGL\Render\RenderTechnique</Filter>
-    </ClInclude>
-    <ClInclude Include="src\mOGL\Render\RenderTechnique\PhotonMapping.h">
-      <Filter>資源檔\mOGL\Render\RenderTechnique</Filter>
-    </ClInclude>
-    <ClInclude Include="src\mOGL\Render\RenderTechnique\RayTracing.h">
-      <Filter>資源檔\mOGL\Render\RenderTechnique</Filter>
-    </ClInclude>
-    <ClInclude Include="src\mOGL\Render\RenderTechnique\RenderTechnique.h">
-      <Filter>資源檔\mOGL\Render\RenderTechnique</Filter>
     </ClInclude>
     <ClInclude Include="src\mOGL\mOGL.h">
       <Filter>資源檔\mOGL</Filter>
@@ -202,6 +184,24 @@
     </ClInclude>
     <ClInclude Include="src\mOGL\Scene\Object\Texture\TextureManager.h">
       <Filter>資源檔\mOGL\Scene\Object\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Scene\Render\RenderTechnique\PhongShading.h">
+      <Filter>資源檔\mOGL\Scene\Render\RenderTechnique</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Scene\Render\RenderTechnique\PhotonMapping.h">
+      <Filter>資源檔\mOGL\Scene\Render\RenderTechnique</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Scene\Render\RenderTechnique\RayTracing.h">
+      <Filter>資源檔\mOGL\Scene\Render\RenderTechnique</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Scene\Render\RenderTechnique\RenderTechnique.h">
+      <Filter>資源檔\mOGL\Scene\Render\RenderTechnique</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Scene\Render\Render.h">
+      <Filter>資源檔\mOGL\Scene\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Scene\Render\RenderManager.h">
+      <Filter>資源檔\mOGL\Scene\Render</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

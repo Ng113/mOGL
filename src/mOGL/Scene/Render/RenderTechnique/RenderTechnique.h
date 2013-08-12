@@ -3,6 +3,7 @@
 
 namespace mOGL
 {
+	class Scene;
 	class RenderTechnique
 	{
 		public:
@@ -13,10 +14,11 @@ namespace mOGL
 				PHOTON_MAPPING
 			} RENDERING_TECHNIQUE;
 		public:
-			RenderTechnique();
+			RenderTechnique( Scene* scene );
 			virtual void render() =0;
 		protected:
-			RENDERING_TECHNIQUE mRenderTechniqueID;
+			RENDERING_TECHNIQUE	mRenderTechniqueID;
+			Scene*										mScene;
 	};
 }
 
