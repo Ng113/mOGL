@@ -9,7 +9,6 @@ namespace mOGL
 		public:
 			typedef enum
 			{
-				GOURAUD_SHADING,
 				PHONG_SHADING,
 				RAY_TRACING,
 				PHOTON_MAPPING

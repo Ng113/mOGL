@@ -1,8 +1,6 @@
 #include "PhongShading.h"
 #include "../../Scene.h"
 #include "../../Object/ObjectManager.h"
-#include "../../Camera/CameraManager.h"
-#include "../../Light/LightManager.h"
 #include "../../../ResourceLoader/Mesh/mesh.h"
 #include "glut.h"
 using namespace mOGL;
@@ -25,12 +23,12 @@ void PhongShading::render()
 }
 void PhongShading::_renderView( void )
 {
-	CameraManager* cameraMgr = mScene->cameraMgr;
+
 }
 
 void PhongShading::_renderLight( void )
 {
-	LightManager* lightMgr = mScene->lightMgr;
+
 }
 
 void PhongShading::_renderObject( void )
