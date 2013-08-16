@@ -1,4 +1,4 @@
-#include "PhongShading.h"
+#include "GouraudShading.h"
 #include "../../Scene.h"
 #include "../../Object/ObjectManager.h"
 #include "../../Camera/CameraManager.h"
@@ -7,9 +7,9 @@
 #include "glut.h"
 using namespace mOGL;
  
-PhongShading::PhongShading( Scene* scene) : RenderTechnique( scene )
+GouraudShading::GouraudShading( Scene* scene) : RenderTechnique( scene )
 {
-	mRenderTechniqueID = PHONG_SHADING;
+	mRenderTechniqueID = GOURAUD_SHADING;
 }
 
 /*
@@ -17,23 +17,23 @@ PhongShading::PhongShading( Scene* scene) : RenderTechnique( scene )
 	1.texture
 	2.rotation
 */
-void PhongShading::render()
+void GouraudShading::render()
 {
 	_renderView();
 	_renderLight();
 	_renderObject();
 }
-void PhongShading::_renderView( void )
+void GouraudShading::_renderView( void )
 {
 	CameraManager* cameraMgr = mScene->cameraMgr;
 }
 
-void PhongShading::_renderLight( void )
+void GouraudShading::_renderLight( void )
 {
 	LightManager* lightMgr = mScene->lightMgr;
 }
 
-void PhongShading::_renderObject( void )
+void GouraudShading::_renderObject( void )
 {
 	ObjectManager* objMgr = mScene->objetMgr;
 	for( int i = 0 ; i < objMgr->NumberOfObject() ; ++i )
