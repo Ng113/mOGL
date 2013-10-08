@@ -24,16 +24,21 @@ mOGL::mOGLApplication::mOGLApplication(int argc, char *argv[]) : width( 1024 ) ,
 	glutMouseFunc( FunPtrMouseClick ); 
 	glutMotionFunc( FunPtrMouseMove );
 
-	createScene();
+	nowFocus->createScene();
 }
 
 void mOGL::mOGLApplication::initial()
 {
+	/* Must on right order */
 	mOGL::ResourceLoader::initial();
-	mRenderMgr = new RenderManager();
+	
 	mSceneMgr = new SceneManager();
 	mMainScene = mSceneMgr->addScene( "mMainScene" );
 	mMainCamera = mMainScene->cameraMgr->addCamera( "mMainCamera" );
+
+	mRenderMgr = new RenderManager();
+	mRenderMgr->setRenderScene( mMainScene );
+
 }
 
 void mOGL::mOGLApplication::run()
@@ -62,6 +67,22 @@ void mOGL::mOGLApplication::createScene( void )
 void mOGL::mOGLApplication::keyboard(unsigned char key, int x, int y)
 {
 	std::cout<<" key:"<< key  <<"  x :" << x << " y: " << y << std::endl;
+
+	switch(key)
+	{
+	case 'w' :
+		mMainCamera->setPosition( mMainCamera->getPosition() + mMainCamera->getDirection() );
+		break;
+	case 's' :
+		mMainCamera->setPosition( mMainCamera->getPosition() -  mMainCamera->getDirection() );
+		break;
+	case 'a' :
+		mMainCamera->setPosition( mMainCamera->getPosition() -  mMainCamera->getDirection().cross( mMainCamera->getUpDirection() ) );
+		break;
+	case 'd' :
+		mMainCamera->setPosition( mMainCamera->getPosition() +  mMainCamera->getDirection().cross( mMainCamera->getUpDirection() ) );
+		break;
+	}
 }
 void mOGL::mOGLApplication::mouseClick(int button, int state, int x, int y)
 {

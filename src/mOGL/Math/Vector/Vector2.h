@@ -7,6 +7,7 @@ namespace mOGL
 	{
 		public:
 			Vector2();
+			Vector2( float* data );
 			Vector2( float x , float y );
 
 			friend Vector2 operator+(const Vector2  &num1, const Vector2 &num2);

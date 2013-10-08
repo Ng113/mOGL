@@ -38,12 +38,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>../../include;$(IncludePath)</IncludePath>
-    <OutDir>$(ProjectDir)\bin\debug</OutDir>
+    <OutDir>$(ProjectDir)\bin\debug\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -70,8 +71,11 @@
     <ClCompile Include="src\mOGL\Math\Vector\Vector2.cpp" />
     <ClCompile Include="src\mOGL\Math\Vector\Vector3.cpp" />
     <ClCompile Include="src\mOGL\mOGLApplication.cpp" />
-    <ClCompile Include="src\mOGL\ResourceLoader\Mesh\mesh.cpp" />
+    <ClCompile Include="src\mOGL\ResourceLoader\Mesh\Face.cpp" />
+    <ClCompile Include="src\mOGL\ResourceLoader\Mesh\Material.cpp" />
+    <ClCompile Include="src\mOGL\ResourceLoader\Mesh\Mesh.cpp" />
     <ClCompile Include="src\mOGL\ResourceLoader\Mesh\MeshManager.cpp" />
+    <ClCompile Include="src\mOGL\ResourceLoader\Mesh\Vertex.cpp" />
     <ClCompile Include="src\mOGL\ResourceLoader\ResourceLoader.cpp" />
     <ClCompile Include="src\mOGL\ResourceLoader\Texture\Texture.cpp" />
     <ClCompile Include="src\mOGL\ResourceLoader\Texture\TextureManager.cpp" />
@@ -82,6 +86,7 @@
     <ClCompile Include="src\mOGL\Scene\Object\Object.cpp" />
     <ClCompile Include="src\mOGL\Scene\Object\ObjectManager.cpp" />
     <ClCompile Include="src\mOGL\Scene\Render\RenderManager.cpp" />
+    <ClCompile Include="src\mOGL\Scene\Render\RenderTechnique\GouraudShading.cpp" />
     <ClCompile Include="src\mOGL\Scene\Render\RenderTechnique\PhongShading.cpp" />
     <ClCompile Include="src\mOGL\Scene\Render\RenderTechnique\PhotonMapping.cpp" />
     <ClCompile Include="src\mOGL\Scene\Render\RenderTechnique\RayTracing.cpp" />
@@ -89,6 +94,7 @@
     <ClCompile Include="src\mOGL\Scene\Scene.cpp" />
     <ClCompile Include="src\mOGL\Scene\SceneManager.cpp" />
     <ClCompile Include="src\mOGL\String\String.cpp" />
+    <ClCompile Include="src\mOGL_Example\Example_1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\mOGL\Math\mMath.h" />
@@ -96,8 +102,11 @@
     <ClInclude Include="src\mOGL\Math\Vector\Vector3.h" />
     <ClInclude Include="src\mOGL\mOGL.h" />
     <ClInclude Include="src\mOGL\mOGLApplication.h" />
-    <ClInclude Include="src\mOGL\ResourceLoader\Mesh\mesh.h" />
+    <ClInclude Include="src\mOGL\ResourceLoader\Mesh\Face.h" />
+    <ClInclude Include="src\mOGL\ResourceLoader\Mesh\Material.h" />
+    <ClInclude Include="src\mOGL\ResourceLoader\Mesh\Mesh.h" />
     <ClInclude Include="src\mOGL\ResourceLoader\Mesh\MeshManager.h" />
+    <ClInclude Include="src\mOGL\ResourceLoader\Mesh\Vertex.h" />
     <ClInclude Include="src\mOGL\ResourceLoader\ResourceLoader.h" />
     <ClInclude Include="src\mOGL\ResourceLoader\Texture\Texture.h" />
     <ClInclude Include="src\mOGL\ResourceLoader\Texture\TextureManager.h" />
@@ -109,6 +118,7 @@
     <ClInclude Include="src\mOGL\Scene\Object\ObjectManager.h" />
     <ClInclude Include="src\mOGL\Scene\Render\Render.h" />
     <ClInclude Include="src\mOGL\Scene\Render\RenderManager.h" />
+    <ClInclude Include="src\mOGL\Scene\Render\RenderTechnique\GouraudShading.h" />
     <ClInclude Include="src\mOGL\Scene\Render\RenderTechnique\PhongShading.h" />
     <ClInclude Include="src\mOGL\Scene\Render\RenderTechnique\PhotonMapping.h" />
     <ClInclude Include="src\mOGL\Scene\Render\RenderTechnique\RayTracing.h" />
@@ -117,6 +127,7 @@
     <ClInclude Include="src\mOGL\Scene\SceneManager.h" />
     <ClInclude Include="src\mOGL\ShaderLoader.h" />
     <ClInclude Include="src\mOGL\String\String.h" />
+    <ClInclude Include="src\mOGL_Example\Example_1.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

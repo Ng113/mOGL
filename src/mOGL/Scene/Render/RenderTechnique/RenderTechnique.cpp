@@ -6,3 +6,8 @@ RenderTechnique::RenderTechnique( Scene* scene )
 {
 	mScene = scene;
 }
+
+void RenderTechnique::setRenderScene( Scene* scene )
+{
+	mScene = scene;
+}

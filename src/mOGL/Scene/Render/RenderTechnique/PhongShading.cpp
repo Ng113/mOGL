@@ -3,7 +3,8 @@
 #include "../../Object/ObjectManager.h"
 #include "../../Camera/CameraManager.h"
 #include "../../Light/LightManager.h"
-#include "../../../ResourceLoader/Mesh/mesh.h"
+#include "../../../ResourceLoader/Mesh/Mesh.h"
+#include <stdlib.h>
 #include "glut.h"
 using namespace mOGL;
  
@@ -40,7 +41,7 @@ void PhongShading::_renderObject( void )
 	{
 		Object* obj = objMgr->getObject( i );
 		if( obj == NULL ) continue;
-		mesh* objMesh = obj->getMeshPointer();
+		Mesh* objMesh = obj->getMeshPointer();
 		
 	/////////////////////////////////////////////////////////////////////
 		for( size_t i = 0 ; i < objMesh->fTotal ; ++i )
@@ -59,10 +60,11 @@ void PhongShading::_renderObject( void )
 			//glRotatef(obj_data[nn]->rotate_y, 0.0, 1.0 , 0.0);
 			
 			glBegin(GL_TRIANGLES);
+			float data[3];
 			for ( size_t j = 0 ; j < 3 ; ++j )
 			{	
-				glNormal3fv( objMesh->nList[ objMesh->faceList[i][j].n ].ptr );
-				glVertex3fv( objMesh->vList[ objMesh->faceList[i][j].v].ptr );	
+				glNormal3fv( objMesh->nList[ objMesh->faceList[i][j].n ].ptr(data) );
+				glVertex3fv( objMesh->vList[ objMesh->faceList[i][j].v].ptr(data) );	
 			}
 			glEnd();
 			glPopMatrix();

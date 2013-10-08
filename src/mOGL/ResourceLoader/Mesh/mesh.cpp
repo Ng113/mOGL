@@ -1,19 +1,11 @@
-// mesh.cpp: implementation of the mesh class.
-//
-//////////////////////////////////////////////////////////////////////
-
-#include "mesh.h"
+#include "Mesh.h"
 #include <iostream>
 
-const char* obj_database = "";	// 定義 mesh 的預設目錄
+using namespace mOGL;
 
-using namespace std;
+const char* obj_database = "";	// 定義 mesh 的預設目錄 之後應該要用script檔
 
-//////////////////////////////////////////////////////////////////////
-// Construction/Destruction
-//////////////////////////////////////////////////////////////////////
-
-mesh::mesh(const char* obj_file)
+Mesh::Mesh(const char* obj_file)
 {
 	matTotal = 0;		// mat[0] reserved for default meterial
 	vTotal = tTotal = nTotal = fTotal = 0;
@@ -21,17 +13,17 @@ mesh::mesh(const char* obj_file)
 	Init(obj_file);
 }
 
-mesh::mesh()
+Mesh::Mesh()
 {
 	matTotal = 0;			
 	vTotal = tTotal = nTotal = fTotal = 0;
 }
 
-mesh::~mesh()
+Mesh::~Mesh()
 {
 }
 
-void mesh::LoadMesh(string obj_file)
+void Mesh::LoadMesh(std::string obj_file)
 {
 	char	token[100], buf[100], v[5][100];	// v[5] 表示一個 polygon 最多可以有 5個 vertex
 	float	vec[3];
@@ -39,16 +31,17 @@ void mesh::LoadMesh(string obj_file)
 	size_t	n_vertex, n_texture, n_normal;
 	size_t	cur_tex = 0;				// state variable: 目前所使用的 material
 
-	scene = fopen(obj_file.c_str(),"r");
+	std::string obj_file_loc = std::string(obj_database) + obj_file;
+	scene = fopen( obj_file_loc.c_str(),"r");
 	s_file = obj_file;
 
 	if (!scene) 
 	{
-		cout<< string("Can not open object File \"") << obj_file << "\" !" << endl;
+		std::cout<< std::string("Can not open object File \"") << obj_file << "\" !" << std::endl;
 		return;
 	}
 
-	cout<<endl<<obj_file<<endl;
+	std::cout<<std::endl<<obj_file<<std::endl;
 		
 	while(!feof(scene))
 	{
@@ -63,30 +56,30 @@ void mesh::LoadMesh(string obj_file)
 		else if (!strcmp(token,"mtllib"))
 		{
   			fscanf(scene,"%s", mat_file);
-			LoadMtl(string(obj_database) + string(mat_file));
+			LoadMtl(std::string(obj_database) + std::string(mat_file));
 		}
 
 		else if (!strcmp(token,"usemtl"))
 		{
 			fscanf(scene,"%s",buf);
-			cur_tex = matMap[s_file+string("_")+string(buf)];
+			cur_tex = matMap[s_file+std::string("_")+std::string(buf)];
 		}
 
 		else if (!strcmp(token,"v"))
 		{
 			fscanf(scene,"%f %f %f",&vec[0],&vec[1],&vec[2]);
-			vList.push_back(Vec3(vec));
+			vList.push_back(Vector3(vec));
 		}
 
 		else if (!strcmp(token,"vn"))
 		{
 			fscanf(scene,"%f %f %f",&vec[0],&vec[1],&vec[2]);
-			nList.push_back(Vec3(vec));
+			nList.push_back(Vector3(vec));
 		}
 		else if (!strcmp(token,"vt"))
 		{
 			fscanf(scene,"%f %f",&vec[0],&vec[1]);
-			tList.push_back(Vec3(vec));
+			tList.push_back(Vector3(vec));
 		}
 
 		else if (!strcmp(token,"f"))
@@ -144,7 +137,7 @@ void mesh::LoadMesh(string obj_file)
 				tmp_vertex[i].m = cur_tex;
 			}
 
-			faceList.push_back(FACE(tmp_vertex[0],tmp_vertex[1],tmp_vertex[2]));
+			faceList.push_back( Face(tmp_vertex[0],tmp_vertex[1],tmp_vertex[2]) );
 		}
 
 		else if (!strcmp(token,"#"))	  // 註解
@@ -162,21 +155,22 @@ void mesh::LoadMesh(string obj_file)
 	printf("vetex: %d, normal: %d, texture: %d, triangles: %d\n",vTotal, nTotal, tTotal, fTotal);
 }
 
-void mesh::LoadMtl(string tex_file)
+void Mesh::LoadMtl(std::string tex_file)
 {
 	char	token[100], buf[100];
 	float	r,g,b;
 
-	texture = fopen(tex_file.c_str(),"r");
+	texture = fopen( tex_file.c_str() ,"r");
+	
 	t_file = tex_file;
 
 	if (!texture) 
 	{
-		cout << "Can't open material file \"" << tex_file << "\"!" << endl;
+		std::cout << "Can't open material file \"" << tex_file << "\"!" << std::endl;
 		return;
 	}
 
-	cout<<tex_file<<endl;
+	std::cout<<tex_file<<std::endl;
 
 	size_t cur_mat;
 
@@ -189,7 +183,7 @@ void mesh::LoadMtl(string tex_file)
 		{
 			fscanf(texture,"%s",buf);
 			cur_mat = matTotal++;					// 從 mat[1] 開始，mat[0] 空下來給 default material 用
-			matMap[s_file+string("_")+string(buf)] = cur_mat; 	// matMap["material_name"] = material_id;
+			matMap[s_file+std::string("_")+std::string(buf)] = cur_mat; 	// matMap["material_name"] = material_id;
 		}
 
 		else if (!strcmp(token,"Ka"))
@@ -236,13 +230,13 @@ void mesh::LoadMtl(string tex_file)
 	if (texture) fclose(texture);
 }
 
-void mesh::Init(const char* obj_file)
+void Mesh::Init(const char* obj_file)
 {
 	float default_value[3] = {1,1,1};
 
-	vList.push_back(Vec3(default_value));	// 因為 *.obj 的 index 是從 1 開始
-	nList.push_back(Vec3(default_value));	// 所以要先 push 一個 default value 到 vList[0],nList[0],tList[0]
-	tList.push_back(Vec3(default_value));
+	vList.push_back( Vector3(default_value) );	// 因為 *.obj 的 index 是從 1 開始
+	nList.push_back( Vector3(default_value) );	// 所以要先 push 一個 default value 到 vList[0],nList[0],tList[0]
+	tList.push_back( Vector3(default_value) );
 
 	// 定義 default meterial: mat[0]
 	mat[0].Ka[0] = 0.0f; mat[0].Ka[1] = 0.0f; mat[0].Ka[2] = 0.0f; mat[0].Ka[3] = 1.0f; 
@@ -251,6 +245,6 @@ void mesh::Init(const char* obj_file)
 	mat[0].Ns = 32.0f;
 	matTotal++;
 
-	LoadMesh(string(obj_file));		// 讀入 .obj 檔 (可處理 Material)
+	LoadMesh(std::string(obj_file));		// 讀入 .obj 檔 (可處理 Material)
 }
 

@@ -9,13 +9,25 @@ Vector3::Vector3()
 	this->y = 0.0;
 	this->z = 0.0;
 }
+Vector3::Vector3( float* data )
+{
+	this->x = data[0];
+	this->y = data[1];
+	this->z = data[2];
+}
 Vector3::Vector3( float x , float y , float z )
 {
 	this->x = x;
 	this->y = y;
 	this->z = z;
 }
-
+float*	Vector3::ptr( float* data )
+{
+	data[0] = this->x;
+	data[1] = this->y;
+	data[2] = this->z;
+	return data;
+}
 Vector3 Vector3::dot( const Vector3 &num1 )
 {
 	return Vector3( num1.x *x , num1.y *y , num1.z *z ); 

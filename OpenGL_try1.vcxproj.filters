@@ -52,6 +52,9 @@
     <Filter Include="資源檔\mOGL\ResourceLoader\Mesh">
       <UniqueIdentifier>{357c0c61-7510-4e1d-86cc-9d2774104ffb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="資源檔\mOGL_Example">
+      <UniqueIdentifier>{fa4a5279-27e4-4d7b-8089-47a6d9765709}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -120,11 +123,26 @@
     <ClCompile Include="src\mOGL\ResourceLoader\Texture\TextureManager.cpp">
       <Filter>資源檔\mOGL\ResourceLoader\Texture</Filter>
     </ClCompile>
-    <ClCompile Include="src\mOGL\ResourceLoader\Mesh\mesh.cpp">
-      <Filter>資源檔\mOGL\ResourceLoader\Mesh</Filter>
-    </ClCompile>
     <ClCompile Include="src\mOGL\ResourceLoader\Mesh\MeshManager.cpp">
       <Filter>資源檔\mOGL\ResourceLoader\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\ResourceLoader\Mesh\Mesh.cpp">
+      <Filter>資源檔\mOGL\ResourceLoader\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\ResourceLoader\Mesh\Material.cpp">
+      <Filter>資源檔\mOGL\ResourceLoader\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\ResourceLoader\Mesh\Face.cpp">
+      <Filter>資源檔\mOGL\ResourceLoader\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\ResourceLoader\Mesh\Vertex.cpp">
+      <Filter>資源檔\mOGL\ResourceLoader\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL\Scene\Render\RenderTechnique\GouraudShading.cpp">
+      <Filter>資源檔\mOGL\Scene\Render\RenderTechnique</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mOGL_Example\Example_1.cpp">
+      <Filter>資源檔\mOGL_Example</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -200,11 +218,26 @@
     <ClInclude Include="src\mOGL\ResourceLoader\Texture\TextureManager.h">
       <Filter>資源檔\mOGL\ResourceLoader\Texture</Filter>
     </ClInclude>
-    <ClInclude Include="src\mOGL\ResourceLoader\Mesh\mesh.h">
-      <Filter>資源檔\mOGL\ResourceLoader\Mesh</Filter>
-    </ClInclude>
     <ClInclude Include="src\mOGL\ResourceLoader\Mesh\MeshManager.h">
       <Filter>資源檔\mOGL\ResourceLoader\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\ResourceLoader\Mesh\Mesh.h">
+      <Filter>資源檔\mOGL\ResourceLoader\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\ResourceLoader\Mesh\Material.h">
+      <Filter>資源檔\mOGL\ResourceLoader\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\ResourceLoader\Mesh\Face.h">
+      <Filter>資源檔\mOGL\ResourceLoader\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\ResourceLoader\Mesh\Vertex.h">
+      <Filter>資源檔\mOGL\ResourceLoader\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL\Scene\Render\RenderTechnique\GouraudShading.h">
+      <Filter>資源檔\mOGL\Scene\Render\RenderTechnique</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mOGL_Example\Example_1.h">
+      <Filter>資源檔\mOGL_Example</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

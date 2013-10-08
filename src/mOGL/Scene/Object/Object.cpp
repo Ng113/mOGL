@@ -1,5 +1,5 @@
 #include "Object.h"
-#include "..\..\ResourceLoader\Mesh\mesh.h"
+#include "..\..\ResourceLoader\Mesh\Mesh.h"
 
 using namespace mOGL;
 
@@ -10,7 +10,7 @@ using namespace mOGL;
 Object::Object( std::string fileName , std::string objName ,int objID)
 {
 	id = objID;
-	mMesh = new mesh( fileName.c_str() );
+	mMesh = new Mesh( fileName.c_str() );
 	position = mOGL::Vector3(0.0,0.0,0.0);
 	lookDirection = mOGL::Vector3(0.0,0.0,1.0);
 	visiable = true;
@@ -77,7 +77,7 @@ bool Object::isVisiable(void)
 	return visiable;
 }
 
-mesh* Object::getMeshPointer(void)
+Mesh* Object::getMeshPointer(void)
 {
 	return mMesh;
 }

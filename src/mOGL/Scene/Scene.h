@@ -15,7 +15,7 @@ namespace mOGL
 		std::string		getName( void );
 	public:
 		ObjectManager*	objetMgr;
-		LightManager*    lightMgr;
+		LightManager*	lightMgr;
 		CameraManager*	cameraMgr;
 	private:
 		std::string mName;

@@ -10,7 +10,7 @@ Camera::Camera( std::string name )
 	lookDirection = mOGL::Vector3( 0.0 , 0.0 , 1.0 );
 	upDirection = mOGL::Vector3( 0.0 , 1.0 , 0.0 );
 	windowPos = mOGL::Vector2( 0.0 , 0.0 );
-	windowLenght = mOGL::Vector2( 0.0 , 0.0 );
+	windowLenght = mOGL::Vector2( 256.0 , 256.0 );
 }
 Camera::Camera( std::string name , mOGL::Vector3	position , mOGL::Vector3	lookDirection , mOGL::Vector3	upDirection)
 {
@@ -19,7 +19,7 @@ Camera::Camera( std::string name , mOGL::Vector3	position , mOGL::Vector3	lookDi
 	this->lookDirection = lookDirection;
 	this->upDirection = upDirection;
 	windowPos = mOGL::Vector2( 0.0 , 0.0 );
-	windowLenght = mOGL::Vector2( 0.0 , 0.0 );
+	windowLenght = mOGL::Vector2( 256.0 , 256.0 );
 }
 void Camera::move( mOGL::Vector3 translation )
 {

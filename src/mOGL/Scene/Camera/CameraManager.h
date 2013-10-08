@@ -17,10 +17,13 @@ namespace mOGL
 			void			removeAllCamera( void );
 			bool			removeCamera( std::string name );
 			Camera*	getCamera( std::string name );
+			Camera*	getCamera();
 			int			getSceneNumber( void ) ;
+			bool		setDefultCameraIndex( int index );
 		private:
-			int									nCameraNum;
+			int						nCameraNum;
 			std::vector< Camera* >	mCameras;
+			int						defultCameraIndex;
 	};
 }
 #endif

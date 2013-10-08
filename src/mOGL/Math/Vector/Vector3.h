@@ -7,10 +7,12 @@ namespace mOGL
 	{
 		public:
 			Vector3();
+			Vector3( float* data );
 			Vector3( float x , float y , float z );
 
 			Vector3 dot( const Vector3 &num1 );
 			Vector3 cross( const Vector3 &num1 );
+			float*	ptr( float* data );
 			float	lenght();
 			Vector3	normalize();
 			void	normalized();

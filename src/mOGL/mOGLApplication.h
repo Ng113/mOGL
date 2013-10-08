@@ -1,31 +1,30 @@
 #ifndef __MOGLAPPLICATION_H__
 #define __MOGLAPPLICATION_H__
-
+#include <stdlib.h>
 #include "glut.h"
 #include "mOGL.h"
 
 namespace mOGL
 {
-	
 	class mOGLApplication
 	{
 		public:
 			mOGLApplication(int argc, char *argv[]);
-			void getFocus();
+			void	getFocus();
 			void	run();
 		protected:
-			virtual void initial();
-			virtual void createScene( void );
+			virtual void	initial();
+			virtual void	createScene( void );
 			virtual void	keyboard(unsigned char key, int x, int y);
 			virtual void	mouseClick(int button, int state, int x, int y);
 			virtual void	mouseMove(int x, int y);
 			virtual void	windowReshape(GLsizei w, GLsizei h);
-			virtual void update( float timeSinceLastFrame );
+			virtual void	update( float timeSinceLastFrame );
 		protected:
 			unsigned int width , height ;
 			SceneManager*	mSceneMgr;
-			Scene*					mMainScene;
-			Camera*				mMainCamera;
+			Scene*			mMainScene;
+			Camera*			mMainCamera;
 			RenderManager*	mRenderMgr;
 		private:
 			static void	FunPtrDisplay( void );
@@ -33,11 +32,11 @@ namespace mOGL
 			static void	FunPtrMouseClick(int button, int state, int x, int y);
 			static void	FunPtrMouseMove(int x, int y);
 			static void	FunPtrWindowReshape(GLsizei w, GLsizei h);
-			static mOGLApplication*	nowFocus; 
 
 			void	display( void );
 		private:
 			float	lastFrameTimer;
+			static	mOGLApplication*	nowFocus; 
 	};
 
 }

@@ -7,6 +7,7 @@ using namespace mOGL;
 CameraManager::CameraManager()
 {
 	nCameraNum = 0;
+	defultCameraIndex = 0;
 }
 
 CameraManager::~CameraManager()
@@ -54,6 +55,11 @@ bool CameraManager::removeCamera( std::string name )
 	}
 
 	return false;
+}
+
+Camera*	CameraManager::getCamera()
+{
+	return mCameras[defultCameraIndex];
 }
 
 Camera* CameraManager::getCamera( std::string name )

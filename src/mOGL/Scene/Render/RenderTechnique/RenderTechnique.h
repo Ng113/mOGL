@@ -16,7 +16,8 @@ namespace mOGL
 			} RENDERING_TECHNIQUE;
 		public:
 			RenderTechnique( Scene* scene );
-			virtual void render() =0;
+			void			setRenderScene( Scene* scene );
+			virtual void	render() =0;
 		protected:
 			RENDERING_TECHNIQUE	mRenderTechniqueID;
 			Scene*										mScene;

@@ -14,19 +14,19 @@ namespace mOGL
 		public:
 			ObjectManager();
 			~ObjectManager();
-			bool						addObject(  std::string  meshName);
-			bool						addObject(  std::string  meshName  , std::string objName );
-			bool						reMoveObject( std::string objName );
-			void						reMoveAllObject(void);
+			bool			addObject(  std::string  meshName);
+			bool			addObject(  std::string  meshName  , std::string objName );
+			bool			reMoveObject( std::string objName );
+			void			reMoveAllObject(void);
 			mOGL::Object*	getObject( std::string objName );
 			mOGL::Object*	getObject( int index );
-			int						NumberOfObject(void);
+			int				NumberOfObject(void);
 		private:
 		private:
-			int												TotalNum;
+			int								TotalNum;
 			std::vector< mOGL::Object* >	objects;
-			TextureManager*							mTextureMgr;
-			MeshManager*							mMeshMgr;
+			TextureManager*					mTextureMgr;
+			MeshManager*					mMeshMgr;
 	};
 }
 #endif
